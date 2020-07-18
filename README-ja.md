@@ -72,3 +72,7 @@ Discord Botのトークンを指定します。必須です。
 ### alias
 
 コマンドのエイリアスを指定します。配列で指定してください。必須ではありません。
+
+## ライセンス
+
+このプロジェクトのライセンスは [MIT ライセンス](https://github.com/book000/DiscordTerminal/blob/master/LICENSE) です。

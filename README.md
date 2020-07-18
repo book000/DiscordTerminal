@@ -72,3 +72,7 @@ Example: `597405190156714004`
 ### alias
 
 Specify an alias for the command. Please specify as an array. Not required.
+
+## License
+
+The license for this project is [MIT License](https://github.com/book000/DiscordTerminal/blob/master/LICENSE).
