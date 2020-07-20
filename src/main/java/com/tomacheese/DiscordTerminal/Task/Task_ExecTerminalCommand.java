@@ -39,7 +39,7 @@ public class Task_ExecTerminalCommand extends Thread {
 		Process p = null;
 		try {
 			ProcessBuilder pb = new ProcessBuilder();
-			pb.command("sh", "-c", command);
+			pb.command(command.split(" "));
 			pb.directory(currentdir);
 			pb.redirectErrorStream(true);
 

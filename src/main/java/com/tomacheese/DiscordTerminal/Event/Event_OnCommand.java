@@ -64,10 +64,10 @@ public class Event_OnCommand {
 			return;
 		}
 
-		new Task_ExecTerminalCommand(alias.get(aliasName) + " 2>&1").start();
+		new Task_ExecTerminalCommand(alias.get(aliasName)).start();
 	}
 
 	void onCommand(String command) {
-		new Task_ExecTerminalCommand(command + " 2>&1").start();
+		new Task_ExecTerminalCommand(command).start();
 	}
 }
