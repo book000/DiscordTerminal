@@ -28,11 +28,10 @@ public class Event_OnCommand {
 
 		if (Main.getRoleID() != -1L && event.getMember() != null) {
 			boolean isAllowRole = event
-					.getMember()
-					.getRoles()
-					.stream()
-					.filter(role -> role != null && role.getIdLong() == Main.getRoleID())
-					.count() != 0;
+                .getMember()
+                .getRoles()
+                .stream()
+                .anyMatch(role -> role != null && role.getIdLong() == Main.getRoleID());
 			if (!isAllowRole) {
 				return;
 			}
