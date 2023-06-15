@@ -13,6 +13,7 @@
 	</properties>
 
 	<build>
+		<finalName>original-DiscordTerminal-${project.version}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -23,18 +24,20 @@
 					<target>17</target>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>3.6.0</version>
+				<version>3.3.0</version>
 				<configuration>
-					<finalName>DiscordTerminal</finalName>
+					<finalName>DiscordTerminal-${project.version}</finalName>
+					<appendAssemblyId>false</appendAssemblyId>
 					<descriptorRefs>
 						<descriptorRef>jar-with-dependencies</descriptorRef>
 					</descriptorRefs>
 					<archive>
 						<manifest>
-							<mainClass>com.tomacheese.discordterminal.Main</mainClass>
+							<mainClass>com.jaoafa.discordterminal.Main</mainClass>
 							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
 							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
 						</manifest>
@@ -50,7 +53,19 @@
 					</execution>
 				</executions>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.2.0</version>
+			</plugin>
 		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 	</build>
 
 	<dependencies>
